@@ -214,7 +214,7 @@ int main(){
     int i;
 
     vector<int>v1 = {1,2,3};
-    vector<int>v2 = {1,7,5};
+    vector<int>v2 = {1,2,5};
 
     cout << "INSERINDO NO VETOR:\n";
     cout << "Digite o tamanho:";
