@@ -25,26 +25,6 @@ class Vetor{
             veto.insert(it,x);
             mostraVetor(veto); 
         }
-        /*void inserindo(int vet[],int tam){
-            int i;
-            int aux;
-            int x; 
-
-            for (i = 0; i < tam; i++) {
-                printf ("Insira um número:");
-                scanf (" %f", &aux);
-                for (x = i; x >= 0; x--) {
-                    if (x == 0) {
-                        vet[x] = aux;
-                    } else {
-                        vet[x] = vet[(x-1)];
-                    }
-                }
-            }
-            for(i = 0; i < tam; i++){
-                cout << vet[i] << " ";
-            }
-        }*/
 
         void inserindo(int vet[],int tam){
             int i;
