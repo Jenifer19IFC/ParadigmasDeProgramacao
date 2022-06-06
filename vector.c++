@@ -25,6 +25,44 @@ class Vetor{
             veto.insert(it,x);
             mostraVetor(veto); 
         }
+        /*void inserindo(int vet[],int tam){
+            int i;
+            int aux;
+            int x; 
+
+            for (i = 0; i < tam; i++) {
+                printf ("Insira um número:");
+                scanf (" %f", &aux);
+                for (x = i; x >= 0; x--) {
+                    if (x == 0) {
+                        vet[x] = aux;
+                    } else {
+                        vet[x] = vet[(x-1)];
+                    }
+                }
+            }
+            for(i = 0; i < tam; i++){
+                cout << vet[i] << " ";
+            }
+        }*/
+
+        void inserindo(int vet[],int tam){
+            int i;
+            int n;
+            int aux = 0;
+
+             while(aux < tam){
+                for (i = 0; i < tam; i++) {
+                    cout << "Insira um número:";
+                    cin >> n;
+                    vet[i] = n;
+                    aux++;
+            }      
+            for(i = 0; i < tam; i++){
+                cout << vet[i] << " ";
+            }
+        }
+        }
 
         void removerFinal(vector<int>veto){
             veto.pop_back();
@@ -162,6 +200,8 @@ class Vetor{
             }
             return 0;
         }
+
+    
   
 };
 
@@ -170,16 +210,25 @@ int main(){
     Vetor veto;
 
     int num;
+    int tam;
+    int i;
 
     vector<int>v1 = {1,2,3};
     vector<int>v2 = {1,7,5};
 
+    cout << "INSERINDO NO VETOR:\n";
+    cout << "Digite o tamanho:";
+    cin >> tam;
+    int v3[tam];
+    veto.inserindo(v3,tam);
+    cout << endl;
+    
     cout << "INSERIR:\n";
     cout << "Digite um número para inserir no início:";
     cin >> num;
     veto.inserirInicio(v1,num);
+   
     cout << endl;
-
     cout << "REMOVER:\n";
     veto.removerFinal(v1);
     cout << endl;
@@ -232,6 +281,8 @@ int main(){
     cout << "UNIÃO\n";
     veto.uniao(vetor1, 3, vetor2, 4);
     cout << endl;
+
+
 
 }
 
